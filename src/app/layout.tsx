@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import NavLink from "@/app/components/NavLink"; // Correct import of NavLink component
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,15 +17,85 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={inter.className}>
+        <nav className="navbar">
+          {/* Logo */}
+          <div className="logo-container">
+            <img
+              src="/logo/"
+              alt="Logo"
+            />
+          </div>
+
+          {/* Navigation Links */}
+          <ul className="nav-links">
+            <li>
+              <NavLink href="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink href="/reserve">Reserve</NavLink>
+            </li>
+            <li>
+              <NavLink href="/menu">Menu</NavLink>
+            </li>
+            <li>
+              <NavLink href="/review?_page=1&_limit=10">Review</NavLink>
+            </li>
+          </ul>
+        </nav>
+
         {children}
+        <footer>
+          <div className="footer-contact-container">
+            <div className="contact">
+              <FontAwesomeIcon
+                icon={faPhone}
+                size="2x"
+                style={{ color: "#070505" }}
+              />
+              <p>+385 12 3456 789</p>
+            </div>
+            <div className="contact">
+              <FontAwesomeIcon
+                icon={faInstagram}
+                size="2x"
+                style={{ color: "#070505" }}
+              />
+              <p>@AFamilia</p>
+            </div>
+          </div>
+          <div className="footer-links">
+            <ul className="links">
+              <li>
+                <NavLink href="/" className="footer-link">Home</NavLink>
+              </li>
+              <li>
+                <NavLink href="/reserve" className="footer-link">Reserve</NavLink>
+              </li>
+              <li>
+                <NavLink href="/menu" className="footer-link">Menu</NavLink>
+              </li>
+              <li>
+                <NavLink href="/review?_page=1&_limit=10" className="footer-link">Review</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-info">
+            <div className="info">
+              <h2>LOCATION: </h2>
+              <p>Adresa restorana, Split</p>
+            </div>
+            <div className="info">
+              <h2>WORKING HOURS: </h2>
+              <p>16:00-02:00</p>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
