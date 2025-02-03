@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import React from "react";
+import React, { Suspense } from "react";
 import classNames from "classnames";
 
 interface NavLinkProps {
@@ -11,7 +11,7 @@ interface NavLinkProps {
   className?: string;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ href, children, className }) => {
+const NavLinkContent: React.FC<NavLinkProps> = ({ href, children, className }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -31,6 +31,14 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, className }) => {
     >
       {children}
     </Link>
+  );
+};
+
+const NavLink: React.FC<NavLinkProps> = (props) => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <NavLinkContent {...props} />
+    </Suspense>
   );
 };
 
