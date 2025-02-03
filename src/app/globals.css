@@ -10,8 +10,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --background-color: #070505;
-  --secondary-color: #86a7df;
-  --secondary-color-dark: #5482d2;
+  --secondary-color: #d4af37; /* Zlatna boja */
+  --secondary-color-dark: #b8860b; /* Tamnija zlatna nijansa */
+
 }
 
 /* Custom styles for the search icon */
@@ -63,10 +64,11 @@ body {
   color: white;
 }
 
-/* .logo-container img {
-  height: 3rem;
-  width: auto;
-} */
+.logo-container img {
+  height: 6rem;
+  width: auto; /* Postavlja određenu širinu */
+}
+
 
 /* Navigation Links */
 .navbar .nav-links {
@@ -198,3 +200,26 @@ footer {
     gap: 10px;
   }
 }
+
+/* More Info Button Styling */
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color-dark);
+  transform: scale(1.05);
+}
+
+/* Optionally, add a border and shadow for a more button-like appearance */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--secondary-color-dark);
+}
+
+button:active {
+  transform: scale(1.02);
+}
+
