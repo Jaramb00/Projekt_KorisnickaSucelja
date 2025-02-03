@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import menuData from "@/app/MenuData";
 import Image from "next/image";
