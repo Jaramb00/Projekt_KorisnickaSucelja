@@ -34,7 +34,7 @@ const NavLinkContent: React.FC<NavLinkProps> = ({ href, children, className }) =
   );
 };
 
-const NavLink: React.FC<NavLinkProps> = (props) => {
+const NavLinkWithSuspense: React.FC<NavLinkProps> = (props) => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <NavLinkContent {...props} />
@@ -42,4 +42,4 @@ const NavLink: React.FC<NavLinkProps> = (props) => {
   );
 };
 
-export default NavLink;
+export default NavLinkWithSuspense;
