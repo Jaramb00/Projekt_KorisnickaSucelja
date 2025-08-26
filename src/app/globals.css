@@ -223,3 +223,52 @@ button:active {
   transform: scale(1.02);
 }
 
+
+
+
+/* ===== Reservations Page Styles ===== */
+.reservations-page {
+  @apply flex min-h-screen flex-col items-center px-6 py-12 bg-gray-50 text-gray-900;
+}
+
+.reservations-title {
+  @apply text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-center;
+}
+
+.reservations-subtitle {
+  @apply text-lg md:text-xl text-gray-600 max-w-2xl text-center mb-12;
+}
+
+.reservations-grid {
+  @apply grid gap-8 md:grid-cols-3 max-w-5xl w-full;
+}
+
+.reservations-card {
+  @apply bg-white rounded-2xl shadow-lg p-6;
+}
+
+.reservations-card-title {
+  @apply text-2xl font-bold mb-4;
+}
+
+.reservations-card-text {
+  @apply text-gray-600 mb-2;
+}
+
+.reservations-card-strong {
+  @apply font-semibold;
+}
+
+
+
+.reservations-guidelines {
+  @apply max-w-3xl text-center mt-16;
+}
+
+.reservations-guidelines-title {
+  @apply text-3xl font-bold mb-4;
+}
+
+.reservations-guidelines-list {
+  @apply text-gray-700 space-y-3;
+}
