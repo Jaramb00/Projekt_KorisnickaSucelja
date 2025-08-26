@@ -279,3 +279,70 @@ button:active {
 .reservations-guidelines-list {
   @apply text-gray-700 space-y-3;
 }
+
+
+/* ===== Review Page Styles ===== */
+.review-page {
+  @apply flex flex-col items-center px-6 py-12 min-h-screen bg-gray-50 text-gray-900;
+}
+
+.review-title {
+  @apply text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-center;
+}
+
+.review-form {
+  @apply w-full max-w-xl bg-white rounded-2xl shadow-lg p-8 mb-12;
+}
+
+.review-input,
+.review-textarea {
+  @apply w-full border border-gray-300 rounded-lg px-4 py-3 mb-4 focus:outline-none focus:ring-2 focus:ring-yellow-400;
+}
+
+.review-stars {
+  @apply flex gap-2 mb-4 text-2xl cursor-pointer;
+}
+
+.review-star {
+  @apply transition-colors text-gray-300;
+}
+
+.review-star.active {
+  @apply text-yellow-400;
+}
+
+.review-submit {
+  @apply bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-6 py-3 rounded-lg transition-all;
+}
+
+.review-list {
+  @apply w-full max-w-3xl flex flex-col gap-6;
+}
+
+.review-empty {
+  @apply text-gray-500 italic text-center;
+}
+
+.review-card {
+  @apply bg-white shadow-md rounded-xl p-6;
+}
+
+.review-header {
+  @apply flex justify-between items-center mb-2 font-semibold;
+}
+
+.review-name {
+  @apply text-gray-800;
+}
+
+.review-rating {
+  @apply text-yellow-400;
+}
+
+.review-text {
+  @apply text-gray-700;
+}
+
+.review-back {
+  @apply mt-8 text-gray-600 hover:underline;
+}
