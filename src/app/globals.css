@@ -346,3 +346,123 @@ button:active {
 .review-back {
   @apply mt-8 text-gray-600 hover:underline;
 }
+
+
+/* ===== Menu Page Styles ===== */
+.menu-page {
+  @apply flex flex-col items-center min-h-screen px-6 py-12 bg-gray-50 text-gray-900;
+}
+
+.menu-search-container {
+  @apply w-full max-w-3xl mb-12;
+}
+
+.menu-search-form {
+  @apply relative w-full;
+}
+
+.menu-search-input {
+  @apply w-full p-3 pl-10 rounded-xl border border-gray-300 bg-white text-gray-900 outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400;
+}
+
+.menu-search-input::placeholder {
+  @apply text-gray-400;
+}
+
+.menu-search-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none;
+}
+
+.menu-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full;
+}
+
+.menu-card {
+  @apply rounded-xl overflow-hidden shadow-md bg-white;
+}
+
+.menu-image-container {
+  @apply relative h-48 sm:h-56 md:h-64;
+}
+
+.menu-image {
+  @apply object-cover w-full h-full;
+}
+
+.menu-card-content {
+  @apply p-4;
+}
+
+.menu-name {
+  @apply font-bold text-lg sm:text-xl mt-2 mb-1 text-gray-900;
+}
+
+.menu-info {
+  @apply text-sm md:text-base text-gray-700;
+}
+
+.menu-more-btn {
+  @apply mt-3 md:mt-4 px-3 py-1 md:px-4 md:py-2 bg-yellow-400 text-white rounded-lg font-semibold hover:bg-yellow-500 transition-all;
+}
+
+/* ===== Ingredients Page (Light Theme, matches Review Page) ===== */
+
+.ingredients-page {
+  @apply flex flex-col items-center px-6 py-12 min-h-screen bg-gray-50 text-gray-900;
+}
+
+.ingredients-page-notfound {
+  @apply flex flex-col items-center justify-center min-h-screen px-8 bg-gray-50 text-gray-900;
+}
+
+.ingredients-page-notfound h1 {
+  @apply text-3xl font-bold mb-8 text-gray-900;
+}
+
+.ingredients-page-notfound button {
+  @apply px-8 py-3 bg-yellow-400 text-white rounded-xl font-semibold hover:bg-yellow-500 transition-colors flex items-center gap-2;
+}
+
+.ingredients-container {
+  @apply max-w-7xl w-full mx-auto;
+}
+
+.ingredients-back button {
+  @apply text-yellow-400 hover:text-yellow-500 font-semibold flex items-center gap-2 mb-12;
+}
+
+.ingredients-header {
+  @apply text-center mb-16;
+}
+
+.ingredients-header h1 {
+  @apply text-4xl font-bold text-yellow-400 mb-6;
+}
+
+.ingredients-image-container {
+  @apply relative w-full max-w-4xl mx-auto h-96 rounded-3xl overflow-hidden shadow-2xl;
+}
+
+.ingredients-image {
+  @apply object-cover w-full h-full rounded-lg;
+}
+
+.ingredients-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto;
+}
+
+.ingredients-card {
+  @apply flex items-center p-6 bg-white border border-gray-300 rounded-xl shadow transition-all duration-300;
+}
+
+.ingredients-card span {
+  @apply text-yellow-400 mr-3;
+}
+
+.ingredients-card h2 {
+  @apply text-gray-900 font-semibold text-xl;
+}
+
+.ingredients-card:hover {
+  @apply border-yellow-400;
+}

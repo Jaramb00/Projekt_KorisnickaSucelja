@@ -10,8 +10,7 @@
     flex-wrap: wrap;
     align-items: center;
     overflow-x: hidden;
-    /* Prevent horizontal scrolling */
-    border-top: 2px solid white;
+    border-top: 2px solid #FACC15; /* yellow accent */
 }
 
 .image-container {
@@ -20,7 +19,6 @@
 
 .image-container img {
     max-width: 100%;
-    /* Ensure the image does not exceed its container */
     height: auto;
     display: block;
     margin: 0;
@@ -32,21 +30,27 @@
     padding: 20px;
     text-align: left;
     box-sizing: border-box;
-    /* Include padding in element's total width and height */
+    color: #374151; /* gray-700 text */
 }
 
 .text-container h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: #111827; /* gray-900 for heading */
 }
 
 .text-container p {
     font-size: 1.25rem;
+    color: #374151; /* gray-700 for paragraph */
 }
 
 /* New class for reversing the layout */
 .image-text-container.reverse {
     flex-direction: row-reverse;
+}
+
+.image-text-container{
+        background-color: rgb(255, 255, 255);
 }
 
 .image-text-container.reverse .text-container {
@@ -55,12 +59,12 @@
 
 .text-container a {
     text-decoration: underline;
-    color: var(--secondary-color);
+    color: #FACC15; /* yellow accent */
     font-size: 2rem;
 }
 
 .text-container a:hover {
-    color: var(--secondary-color-dark);
+    color: #FBBF24; /* slightly darker yellow on hover */
 }
 
 /* Responsive Styles */
