@@ -272,3 +272,76 @@ button:active {
 .reservations-guidelines-list {
   @apply text-gray-700 space-y-3;
 }
+.review-page {
+  @apply flex flex-col items-center p-6 min-h-screen bg-gray-50 font-inter;
+}
+
+.review-title {
+  @apply text-5xl font-extrabold mb-8 text-gray-800;
+}
+
+.review-form {
+  @apply w-full max-w-md bg-white p-6 rounded-lg shadow-md flex flex-col gap-4 mb-8;
+}
+
+.review-input {
+  @apply border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
+.review-textarea {
+  @apply border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white;
+}
+
+.review-stars {
+  @apply flex items-center gap-2;
+}
+
+.review-star {
+  @apply cursor-pointer text-3xl text-gray-300 transition-colors;
+}
+
+.review-star.active {
+  @apply text-yellow-400;
+}
+
+.review-submit {
+  @apply bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-medium;
+}
+
+.review-list {
+  @apply w-full max-w-md flex flex-col gap-4;
+}
+
+.review-empty {
+  @apply text-gray-500 text-center;
+}
+
+.review-card {
+  @apply bg-black text-white p-4 rounded-lg shadow-md flex flex-col gap-2;
+}
+
+.review-header {
+  @apply flex justify-between items-center;
+}
+
+.review-name {
+  @apply font-bold;
+}
+
+.review-rating {
+  @apply text-yellow-400;
+}
+
+.review-text {
+  @apply bg-gray-900 p-2 rounded;
+}
+
+.review-back {
+  @apply mt-8 text-blue-600 underline;
+}
+.review-input,
+.review-textarea {
+  @apply border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-400;
+  color: #000000; /* CRNA boja teksta dok se upisuje */
+  background-color: #ffffff; /* bijela pozadina */
+}

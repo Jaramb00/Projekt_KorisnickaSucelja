@@ -5,7 +5,7 @@ export default function Home() {
     <div className="relative home-background-pic">
       {/* Pozadinska slika restorana */}
       <img
-        src="img/matejuska.jpg"
+        src="/img/matejuska.jpg"
         alt="Restaurant Background"
         className="absolute inset-0 w-full h-full object-cover"
       />
