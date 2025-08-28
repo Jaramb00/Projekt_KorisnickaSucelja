@@ -354,7 +354,7 @@ button:active {
 }
 
 .menu-search-container {
-  @apply w-full max-w-3xl mb-12;
+  @apply w-full max-w-3xl mb-16; /* povećan margin-bottom za veći razmak od grida */
 }
 
 .menu-search-form {
@@ -374,7 +374,7 @@ button:active {
 }
 
 .menu-grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full;
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full mt-4; /* dodatni margin-top za još bolji odmak */
 }
 
 .menu-card {
@@ -404,6 +404,7 @@ button:active {
 .menu-more-btn {
   @apply mt-3 md:mt-4 px-3 py-1 md:px-4 md:py-2 bg-yellow-400 text-white rounded-lg font-semibold hover:bg-yellow-500 transition-all;
 }
+
 
 /* ===== Ingredients Page (Light Theme, matches Review Page) ===== */
 
